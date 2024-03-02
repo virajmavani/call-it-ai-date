@@ -19,7 +19,7 @@ export interface Profile {
 
 const ProfileCard = (props: Profile) => {
     return (
-        <div className="flex justify-center max-w-96">
+        <div className="flex content-center max-w-96">
             <Card>
                 <CardHeader>
                     <CardTitle>{props.firstName} {props.lastName}</CardTitle>

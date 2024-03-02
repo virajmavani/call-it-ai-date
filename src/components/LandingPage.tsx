@@ -42,7 +42,7 @@ const LandingPage = () => {
                             AI based Date Planner
                         </Text>
                     </div>
-                    <div className="flex items-center w-full">
+                    <div className="flex items-center justify-center p-6 w-full">
                         <ProfileCarousel/>
                     </div>
 
