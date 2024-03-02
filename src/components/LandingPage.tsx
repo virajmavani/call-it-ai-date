@@ -4,7 +4,15 @@ import { useState } from 'react';
 import { Theme, Heading, Text, Button } from '@radix-ui/themes';
 import { WavyBackground } from './ui/WavyBackground';
 import ProfileCarousel from '@/components/ProfileCarousel';
-
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } from "@/components/ui/dialog"
+  
 const LandingPage = () => {
     const [textContent, setTextContent] = useState("");
     const [resultsLabelVisible, setResultsLabelVisible] = useState(false);
@@ -32,7 +40,9 @@ const LandingPage = () => {
         >
             <WavyBackground>
                 <div className="flex min-h-screen flex-col items-center space-y-10 p-6 w-screen">
+                    <button>Edit Profile</button>
                     <div className="flex items-center">
+
                         <Heading>
                             🤖 Call It AI Date ❤️
                         </Heading>
