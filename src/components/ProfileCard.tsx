@@ -19,20 +19,18 @@ export interface Profile {
 
 const ProfileCard = (props: Profile) => {
     return (
-        <div className="flex content-center max-w-96">
-            <Card>
-                <CardHeader>
-                    <CardTitle>{props.firstName} {props.lastName}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <Avatar className="h-24 w-24">
-                        <AvatarImage src={props.picture} />
-                        <AvatarFallback>{props.firstName.charAt(0)}{props.lastName.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                    <CardDescription>{props.bio}</CardDescription>
-                </CardContent>
-            </Card>
-        </div>
+        <Card className="flex flex-col items-center justify-center max-w-96">
+            <CardHeader>
+                <CardTitle>{props.firstName} {props.lastName}</CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-col items-center justify-center max-w-96">
+                <Avatar className="h-36 w-36">
+                    <AvatarImage src={props.picture} />
+                    <AvatarFallback>{props.firstName.charAt(0)}{props.lastName.charAt(0)}</AvatarFallback>
+                </Avatar>
+                <CardDescription>{props.bio}</CardDescription>
+            </CardContent>
+        </Card>
     );
 }
 

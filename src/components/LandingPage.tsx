@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Theme, Heading, TextArea, Text, Button } from '@radix-ui/themes';
+import { Theme, Heading, Text, Button } from '@radix-ui/themes';
 import { WavyBackground } from './ui/WavyBackground';
 import ProfileCarousel from '@/components/ProfileCarousel';
 
@@ -9,7 +9,7 @@ const LandingPage = () => {
     const [textContent, setTextContent] = useState("");
     const [resultsLabelVisible, setResultsLabelVisible] = useState(false);
 
-    const handleDetectButton = () => {
+    const handleSubmitButton = () => {
         setResultsLabelVisible(true);
         setTimeout(() => {
             const cache = localStorage.getItem(textContent);
@@ -31,7 +31,7 @@ const LandingPage = () => {
             scaling="95%"
         >
             <WavyBackground>
-                <div className="flex min-h-screen flex-col items-center space-y-10 p-24 w-screen">
+                <div className="flex min-h-screen flex-col items-center space-y-10 p-6 w-screen">
                     <div className="flex items-center">
                         <Heading>
                             🤖 Call It AI Date ❤️
@@ -42,12 +42,12 @@ const LandingPage = () => {
                             AI based Date Planner
                         </Text>
                     </div>
-                    <div className="flex items-center justify-center p-6 w-full">
+                    <div className="flex items-center justify-center w-full">
                         <ProfileCarousel/>
                     </div>
 
                     <div className="flex items-center">
-                        <Button className="w-full" onClick={handleDetectButton}>Plan A Date ❤️</Button>
+                        <Button className="w-full" onClick={handleSubmitButton}>Plan A Date ❤️</Button>
                     </div>
 
                     <div className={"flex flex-col items-center " + (resultsLabelVisible ? "visible" : "hidden")}>
